@@ -37,3 +37,41 @@ while(nms.hasMoreElements()) {
 	} 
 
 }
+
+
+/*################################################ EXAMPLE 2 ############################################################*/
+
+
+import java.util.Hashtable;
+import java.util.Map;
+
+public class Hashtable2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+Hashtable <Integer,String> hashtable= new Hashtable<Integer,String>();
+		hashtable.put(100,"Amit");
+		hashtable.put(102,"Ravi");
+		hashtable.put(101,"Vijay");
+		hashtable.put(103,"Rahul");
+		hashtable.put(104,"Amit");
+for(Map.Entry m : hashtable.entrySet()) {
+	System.out.println("Key : "+m.getKey()+" Value: "+m.getValue());
+	
+}
+System.out.println("Before remove : "+hashtable);
+hashtable.remove(102);
+System.out.println("After remove : "+hashtable);
+
+System.out.println(hashtable.getOrDefault(101,"Not Found"));
+System.out.println(hashtable.getOrDefault(105,"Not Found"));
+
+hashtable.putIfAbsent(105,"Gaurav");
+System.out.println("Updated hash table: "+hashtable);
+hashtable.putIfAbsent(105,"jay");
+System.out.println("Updated hash table: "+hashtable);
+	}
+
+}
+
